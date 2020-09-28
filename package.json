@@ -1,13 +1,14 @@
 {
   "name": "assignment1",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "portfolio",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "engine": {
-    "node":"^12.00.0",
+    "node": "^12.00.0",
     "npm": "^6.0.0"
   },
   "author": "Kunwoo Yoon",
@@ -18,5 +19,14 @@
     "express-ejs-layouts": "^2.5.0",
     "express-partial-templates": "^0.2.1",
     "nodemon": "^2.0.4"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ykw0628/Webdevelopment-comp229.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ykw0628/Webdevelopment-comp229/issues"
+  },
+  "homepage": "https://github.com/ykw0628/Webdevelopment-comp229#readme"
 }
