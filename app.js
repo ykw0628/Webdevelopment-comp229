@@ -12,6 +12,6 @@ app.get('/', (req, res) =>{
 
 app.use('/',index);
 app.use(expressLayouts);
-app.listen(3000, function(){
+app.listen(process.env.PORT || 3000, function(){
     console.log('Example app is listening on port 3000')
 });
