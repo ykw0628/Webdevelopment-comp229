@@ -30,6 +30,11 @@ body{
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     cursor: default;
+    background-image: url("/imgs/home.jpg");
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 body, html {
     height: 100%;
@@ -47,6 +52,33 @@ button{
     border: none;
     outline: none;
 }
+/* Typography*/
+h1{
+    font-size:var(--font-large);
+    font-weight: var(--weight-bold);
+    color: var(--color-deep-blue);
+    margin:16px 0;
+}
+h2{
+    font-size: var(--font-medium);
+    font-weight: var(--weight-semi-bold);
+    color: var(--color-deep-blue);
+    margin:8px 0;
+}
+h3{
+    font-size: var(--font-regular);
+    font-weight:var(--weight-regular);
+    color: var(--color-deep-blue);
+
+    margin:8px 0;
+}
+p{
+    font-size: var(--font-regular);
+    font-weight:var(--weight-regular);
+    color: var(--color-deep-blue);
+    margin:4px 0; 
+}
+
 /* Section common */
 .section{
     padding: 50px;;
@@ -109,11 +141,6 @@ button{
 }
 /* Home */
 #home{
-    background-image: url("/imgs/home.jpg");
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     padding: 40px 40px 0 40px;
     padding-top:80px;
     text-align: center;
@@ -144,4 +171,36 @@ button{
 .home__contact:hover {
     transition: all 1s ease;
     transform: scale(1.5) perspective(1px);
+}
+
+
+/* About me */
+#about{
+    padding: 40px 40px 0 40px;
+    text-align: center;
+    padding-top: 120px;
+    position: relative;
+}
+.about__majors{
+    display: flex;
+    justify-content: space-around;
+    margin:60px 0;
+}
+.major__icon{
+    width: 200px;
+    height: 170px;
+    border: 1px solid var(--color-blue);
+    color: var(--color-blue);
+    border-radius: 50%;
+    font-size: 70px;
+    line-height: 170px;
+    margin-bottom: 10px;
+    margin-right: 0;
+}
+.major__icon i {
+    transition: var(--animation-duration);
+}
+.major__icon:hover i{
+    color: white;
+    transform: rotate(-20deg) scale(1.1);
 }
