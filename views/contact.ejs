@@ -1,19 +1,44 @@
+<%- include('partials/header'); %>
+<%- include('partials/main-nav'); %>
+    <!-- Contact -->
+    <div class="wrapper">
+    <section id="contact" class="section">
+     <form class="">
+        <h1 class="contact__title">Let's talk</h1>
+        <div class="container__form">
+            <form action="action_page.php">
+          
+              <label for="fname">First Name<input type="text" id="fname" name="firstname" placeholder="Your name.."></label>
+              
+          
+              <label for="lname">Last Name<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              </label>
+          
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Your email">
 
-        <%- include('partials/header'); %>
-    <%- include('partials/main-nav'); %>
-    <!-- home -->
-    <section id="home">
-        <div class="home__container">
-            <img src="imgs/kunwoo.jpg" alt="Colin's profile photo" class="home__avatar"/>
-            <h1 class="home__title">Hello, <br>I am Kunwoo Yoon(Colin)</h1>
-            <h2 class="home__description">I am software engineering student in Toronto</h2>
-            <button class="home__contact" data-link="#contact">Contact Me</button>
-            
+          
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              <div class="button__box">
+                <button type="button">Send</button>
+                <button type="reset">Cancel</button>
+              </div>
+
+          
+            </form>
+          </div>
+        <h2 class="contact__email">ykw0628@gmail.com</h2>
+        <div class="contact__link">
+            <a href="https://github.com/ykw0628" target="black">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/kunwoo-yoon-3524731a4" target="black">
+                <i class="fab fa-linkedin"></i>
+            </a>
         </div>
-        <footer>
-            <%- include('partials/footer'); %>
-        </footer>
+        <%- include('partials/bottom_nav'); %>  
     </section>
-
-</body>
-</html>
+    </div>
+ 
+<%- include('partials/footer'); %>
