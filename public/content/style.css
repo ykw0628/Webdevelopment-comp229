@@ -276,6 +276,12 @@ p{
 }
 
 /* project */
+#project{
+    padding: 40px 40px 0 40px;
+    text-align: center;
+    padding-top: 120px;
+    position: relative;
+}
 .project_categories{
     margin: 40px;
 }
@@ -317,6 +323,7 @@ p{
     justify-content: center;
     opacity: 1;
     transition: all var(--animation-duration) ease-out;
+    margin-bottom: 120px;
 
 }
 .project__projects.anim-out{
@@ -375,6 +382,21 @@ p{
     background-color: var(--color-dark-white);
 }
 
+/*service*/
+#service{
+    padding-top: 120px;
+    position: relative;
+}
+.service__container{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+
+}
+.service__container,
+.service__container h1{
+    justify-content: flex-start;
+}
 
 /* Contact */
 .contact__title,

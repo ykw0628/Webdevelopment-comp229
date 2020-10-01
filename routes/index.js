@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
   });
 
   router.get('/services', (req, res) => {
-    res.render('index');
+    res.render('services');
   });
 
   router.get('/contact', (req, res) => {

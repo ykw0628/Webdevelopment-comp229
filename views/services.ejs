@@ -1,19 +1,14 @@
-
-        <%- include('partials/header'); %>
-    <%- include('partials/main-nav'); %>
+<%- include('partials/header'); %>
+<%- include('partials/main-nav'); %>
     <!-- home -->
-    <section id="home">
-        <div class="home__container">
-            <img src="imgs/kunwoo.jpg" alt="Colin's profile photo" class="home__avatar"/>
-            <h1 class="home__title">Hello, <br>I am Kunwoo Yoon(Colin)</h1>
-            <h2 class="home__description">I am software engineering student in Toronto</h2>
-            <button class="home__contact" data-link="#contact">Contact Me</button>
-            
+    <div class="wrapper">
+    <section id="service">
+        <div class="service__container">
+            <h1 class="service__title">Web Design &<br>Development</h1>
+            <h2 class="service__description">Client-focused, customer-centric, creating website solutions that deliver tangible business results, Appnovation's web developers helps brands the ever-changing digital landscape.</h2>
         </div>
-        <footer>
-            <%- include('partials/footer'); %>
-        </footer>
+<%- include('partials/bottom_nav'); %>     
     </section>
+    </div>
 
-</body>
-</html>
+<%- include('partials/footer'); %>
