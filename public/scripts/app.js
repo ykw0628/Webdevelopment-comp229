@@ -5,6 +5,7 @@
 
     function Start() {
         console.log("App Started...");
+
     // Make navbar transparent when it is on the top
     const navbar = document.querySelector('#navbar');
     const navbarHeight = navbar.getBoundingClientRect().height;
@@ -16,11 +17,13 @@
         }
     });
 
-    //Navbar toggle button for small screen
-    const navbarToggle = document.querySelector('.navbar__toggle-btn');
-    navbarToggle.addEventListener('click', () =>{
-        navbarMenu.classList.toggle('open');
+     //Navbar toggle button for small screen
+     const navbarToggle = document.querySelector('.navbar__toggle-btn');
+     const navbarMenu = document.querySelector('.navbar__menu');
+     navbarToggle.addEventListener('click', () =>{
+     navbarMenu.classList.toggle('open');
     });
+
     }
     window.addEventListener("load", Start);
 })();

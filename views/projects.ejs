@@ -1,19 +1,28 @@
-
-        <%- include('partials/header'); %>
-    <%- include('partials/main-nav'); %>
-    <!-- home -->
-    <section id="home">
-        <div class="home__container">
-            <img src="imgs/kunwoo.jpg" alt="Colin's profile photo" class="home__avatar"/>
-            <h1 class="home__title">Hello, <br>I am Kunwoo Yoon(Colin)</h1>
-            <h2 class="home__description">I am software engineering student in Toronto</h2>
-            <button class="home__contact" data-link="#contact">Contact Me</button>
-            
+<%- include('partials/header'); %>
+<%- include('partials/main-nav'); %>
+    <!-- Project -->
+    <div class="wrapper">
+    <section id="project" class="section">
+    <div class="section__container">
+        <h1>My project</h1>
+        <h3>Projects</h3>
+        <div class="project__categories ">
+            <button class="category__btn selected" data-filter="*">All<span class="category__count">1</span></button>
+            <button class="category__btn" data-filter="front-end">Front-end<span class="category__count">0</span></button>
+            <button class="category__btn" data-filter="back-end">Back-end<span class="category__count">1</span></button>
         </div>
-        <footer>
-            <%- include('partials/footer'); %>
-        </footer>
+        <div class="project__projects">
+            <a href="https://colllin.000webhostapp.com/register.php" class="project" target="black" data-type="back-end">
+                <img src="/assets/imgs/project1.PNG" alt="project1" srcset="/assets/image.png **0.8**x" alt="image" class="project__img">
+                <div class="project__description">
+                    <h3>Project1</h3>
+                    <span>A social networking website using Object Oriented approach, including features such as newsfeeds, profiles and friend system.</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <%- include('partials/bottom_nav'); %>    
     </section>
+    </div>
 
-</body>
-</html>
+<%- include('partials/footer'); %>
