@@ -3,8 +3,10 @@ let express = require('express');
 let app = express();
 let index=require('./routes/index');
 let expressLayouts = require('express-ejs-layouts') // to use EJS layout
+
 app.use(express.static(__dirname + "/public"));
 app.use(require('express-partial-templates')(app));
+app.use(express.static(__dirname + '/node_modules'));
 app.set('view engine', 'ejs');
 app.get('/', (req, res) =>{
     res.render('index', {foo: 'FOO'});
