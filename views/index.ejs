@@ -1,17 +1,11 @@
-<%- include('partials/header'); %>
-
-<%- include('partials/main-nav'); %>
-    <!-- home -->
-    <div class="wrapper">
-    <section id="home">
-        <div class="home__container">
-            <img src="assets/imgs/kunwoo.jpg" alt="Colin's profile photo" class="home__avatar"/>
-            <h1 class="home__title">Hello, <br>I am Kunwoo Yoon(Colin)</h1>
-            <h2 class="home__description">I am software engineering student in Toronto</h2>
-            <button class="home__contact" data-link="#contact">Contact Me</button>  
-        </div>
-<%- include('partials/bottom_nav'); %>     
-    </section>
-    </div>
-
-<%- include('partials/footer'); %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+  </body>
+</html>
