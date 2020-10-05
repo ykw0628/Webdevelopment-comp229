@@ -1,0 +1,55 @@
+<!-- Navbar -->
+        <nav id="navbar">
+            <div class="navbar__logo">
+            <img src="asset/imgs/favicon.png" alt="Kunwoo_Yoon" class="kw" style='vertical-align:middle; display:inline;'>
+            <a href="https://ykw0628.github.io/portfolio/" >Colin</a>
+            </div>
+            <div class="navbar__menu">
+             <ul>
+			 <% if (title == "Home"){ %>
+        <li class="navbar__menu__item">
+        <% } else  { %>
+        <li class="navbar__menu__item">
+        <% } %>
+          <a class="nav-link" href="/home">Home </a>
+        </li>
+
+        <% if (title == "About") { %>
+        <li class="navbar__menu__item">
+        <% } else  { %>
+        <li class="navbar__menu__item">
+        <% } %>
+          <a class="nav-link" href="/about">About </a>
+        </li>
+
+        <% if (title == "Products") { %>
+        <li class="navbar__menu__item">
+        <% } else  { %>
+        <li class="navbar__menu__item">
+        <% } %>
+          <a class="nav-link" href="/products">Products </a>
+        </li>
+
+        <% if (title == "Services") { %>
+        <li class="navbar__menu__item">
+        <% } else  { %>
+        <li class="navbar__menu__item">
+        <% } %>
+          <a class="nav-link" href="/services">Services </a>
+        </li>
+
+        <% if (title == "Contact") { %>
+        <li class="navbar__menu__item">
+        <% } else  { %>
+        <li class="navbar__menu__item">
+        <% } %>
+          <a class="nav-link" href="/contact">Contact </a>
+        </li>
+             </ul>
+            </div>
+ <!-- Toggle button-->
+            <button class="navbar__toggle-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+  

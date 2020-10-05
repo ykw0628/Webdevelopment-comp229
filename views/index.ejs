@@ -1,11 +1,27 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<%- include partials/header.ejs %>
+
+<%- include partials/main_nav.ejs %>
+  
+
+<!-- home -->
+  <main class="container">
+      <div>
+    <section id="home">
+        <div class="home__container">
+            <img src="asset/imgs/kunwoo.jpg" alt="Colin's profile photo" class="home__avatar"/>
+            <h1 class="home__title">Hello, Welcome to <%= title %> page<br>I am Kunwoo Yoon(Colin)</h1>
+            <h2 class="home__description">I am software engineering student in Toronto</h2>
+            <button class="home__contact">Contact Me</button>  
+        </div> 
+    </section>
+    </div>
+  </main>
+  
+<%- include partials/bottom_nav.ejs %>  
+
+<%- include partials/footer.ejs %>
+  
+
+
+
+
