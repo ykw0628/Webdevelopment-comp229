@@ -1,6 +1,10 @@
 let express = require('express');
 let router = express.Router();
 
+let mongoose = require('mongoose');
+
+let Movie = require('../models/movie');
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Home'});
@@ -17,8 +21,8 @@ router.get('/about', function(req, res, next) {
 });
 
 /* GET Products page. */
-router.get('/products', function(req, res, next) {
-  res.render('index', { title: 'Products'});
+router.get('/projects', function(req, res, next) {
+  res.render('index', { title: 'projects'});
 });
 
 /* GET Services page. */
@@ -28,7 +32,21 @@ router.get('/services', function(req, res, next) {
 
 /* GET Contact Us page. */
 router.get('/contact', function(req, res, next) {
-  res.render('index', { title: 'Contact'});
+  res.render('contact', { title: 'Contact'});
+});
+
+/* GET Movie list. */
+router.get('/movie-list', function(req, res, next) {
+  
+  Movie.Model.find((err,data) =>{
+    if (err) {
+      console.log(err);
+      res.end();
+    }
+    
+   res.render('index', { title: 'Movie List', movieList: data });
+  });
+
 });
 
 module.exports = router;

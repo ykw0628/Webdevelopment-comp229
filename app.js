@@ -9,6 +9,26 @@ let usersRouter = require('./routes/users');
 
 let app = express();
 
+let mongoose = require('mongoose');
+
+let DB = require('./config/DB');
+mongoose.connect(DB.URL, {useNewUrlParser: true, useUnifiedTopology: true});
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log("Connection open...");
+});
+db.once('connected', function(){
+  console.log("Connected to MongoDB...")
+});
+db.on('reconnected', function(){
+  console.log("Connected to MongoDB...")
+});
+db.on('reconnected', function(){
+  console.log("Disconnected to MongoDB...")
+});
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs'); // express -e 

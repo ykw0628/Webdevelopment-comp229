@@ -22,18 +22,46 @@
      navbarToggle.addEventListener('click', () =>{
      navbarMenu.classList.toggle('open');
     });
+
     //contact button
-    const contactbnt = document.querySelector('.home__contact');
-    contactbnt.addEventListener('click', () =>{
-        location.href = "/contact"; 
-    });
+    if(document.title == "Contact"){
+        
+        let sendBtn = document.querySelector('.contact__send');
+        let cancelBtn = document.querySelector('.reset__btn');
+        let form = document.forms[0];
+
+        sendBtn.addEventListener("click", (event) =>{
+            event.preventDefault();
+
+            let firstName = document.getElementById("fname").value;
+            let lasttName = document.getElementById("lname").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("subject").value;
+
+            console.info(`Last Name: ${lasttName}
+            First name: ${firstName}
+            Email: ${email}
+            Message: ${message}
+            `);
+            form.reset();
+        });
+
+        cancelBtn.addEventListener("click", (event) =>{
+            event.preventDefault();
+            if(confirm("Are you sure?")){
+                location = "/home";
+            }
+        });
+
+    }
 
 
-/*/Projects
-const projectBtnContainer = document.querySelector('.project__categories');
-const projectContainer = document.querySelector('.project__projects');
+
+//Projects
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
 const projects = document.querySelectorAll('.project');
-projectBtnContainer.addEventListener('click', (e)=>{
+workBtnContainer.addEventListener('click', (e)=>{
     const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
     if (filter == null) {
         return;
@@ -58,7 +86,8 @@ projectBtnContainer.addEventListener('click', (e)=>{
         projectContainer.classList.remove('anim-out');
     }, 300);
 });
-*/
+
+
     }
     window.addEventListener("load", Start);
 })();

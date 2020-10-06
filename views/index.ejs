@@ -6,6 +6,7 @@
 <!-- home -->
   <main class="container">
       <div>
+          <% if(title == "Home") { %>
     <section id="home">
         <div class="home__container">
             <img src="asset/imgs/kunwoo.jpg" alt="Colin's profile photo" class="home__avatar"/>
@@ -14,7 +15,11 @@
             <button class="home__contact">Contact Me</button>  
         </div> 
     </section>
-    </div>
+    <% } %>
+    <% if(title == "projects") { %>
+    <%- include content/projects.ejs %>  
+    <% } %>
+        </div>
   </main>
   
 <%- include partials/bottom_nav.ejs %>  
