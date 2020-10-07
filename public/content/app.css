@@ -178,15 +178,12 @@ Date: Oct. 05.2020
   #home{  
       padding: 40px 40px 0 40px;
       text-align: center;
+      padding-top: 220px;
       
   }
-  .home__avatar{
-      height: 300px;
-      width: 300px;
-      margin-bottom: 40px;
-      border-radius: 50%;
-      border: 3px solid var(--color-deep-blue);
-      margin-top: 100px;
+  .home__title{  
+    font-size: 70px !important;
+    padding-bottom: 10px;
   }
   .home__title,
   .home__description{
@@ -216,6 +213,23 @@ Date: Oct. 05.2020
       padding-top: 120px;
       position: relative;
   }
+  .about__avatar{
+    height: 300px;
+    width: 300px;
+    margin-bottom: 40px;
+    border-radius: 50%;
+    border: 3px solid var(--color-deep-blue);
+}
+.resume__link{
+    font-size: var(--font-medium);
+    text-decoration: none;
+    color: var(--color-deep-blue);
+}
+.resume__link:hover{
+    font-size: var(--font-medium);
+    text-decoration: none;
+    color: var(--color-deep-blue);
+}
   .about__majors{
       display: flex;
       justify-content: space-around;
