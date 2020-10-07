@@ -6,6 +6,17 @@
     function Start() {
         console.log("App Started...");
 
+    //Home contact Button
+        if (document.title == "Home") {
+            const home__contact_btn = document.querySelector('.home__contact');
+            home__contact_btn.addEventListener("click", (event) =>{
+                    location = "/contact";       
+            });
+        }
+
+    
+
+
     // Make navbar transparent when it is on the top
     const navbar = document.querySelector('#navbar');
     const navbarHeight = navbar.getBoundingClientRect().height;
@@ -22,6 +33,7 @@
      navbarToggle.addEventListener('click', () =>{
      navbarMenu.classList.toggle('open');
     });
+
 
     //contact button
     if(document.title == "Contact"){
@@ -56,16 +68,16 @@
     }
 
 
-
-//Projects
-const workBtnContainer = document.querySelector('.work__categories');
-const projectContainer = document.querySelector('.work__projects');
-const projects = document.querySelectorAll('.project');
-workBtnContainer.addEventListener('click', (e)=>{
-    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-    if (filter == null) {
-        return;
-    }
+if (document.title == "projects") {
+    //Projects
+    const workBtnContainer = document.querySelector('.project__categories');
+    const projectContainer = document.querySelector('.project__projects');
+    const projects = document.querySelectorAll('.project');
+    workBtnContainer.addEventListener('click', (e)=>{
+        const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+        if (filter == null) {
+            return;
+        }
     
  //remove selection from the previous item and select new one
     const active = document.querySelector('.category__btn.selected');
@@ -86,6 +98,8 @@ workBtnContainer.addEventListener('click', (e)=>{
         projectContainer.classList.remove('anim-out');
     }, 300);
 });
+}
+
 
 
     }
