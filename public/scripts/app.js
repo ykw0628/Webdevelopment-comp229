@@ -1,5 +1,12 @@
 'use strict';
-// IIFF --Immediately Invoked Function Expression
+/*-----------------------------------------------------------------
+file name: Assignment1
+Description: Web development assignment
+Name: Kunwoo Yoon
+Student Id:300992625
+Date: Oct. 05.2020
+-----------------------------------------------------------------
+*/
 
 (function(){
 
@@ -15,8 +22,6 @@
         }
 
     
-
-
     // Make navbar transparent when it is on the top
     const navbar = document.querySelector('#navbar');
     const navbarHeight = navbar.getBoundingClientRect().height;
@@ -67,9 +72,8 @@
 
     }
 
-
+    //Projects category 
 if (document.title == "projects") {
-    //Projects
     const workBtnContainer = document.querySelector('.project__categories');
     const projectContainer = document.querySelector('.project__projects');
     const projects = document.querySelectorAll('.project');
@@ -85,7 +89,7 @@ if (document.title == "projects") {
     const target = e.target.nodeName ==='BUTTON' ? e.target : e.target.parentNode;
     target.classList.add('selected');
 
-    projectContainer.classList.add('anim-out');
+    projectContainer.classList.add('anim-out'); //when proejct category clicked add animation for proejcts
     setTimeout(() => {
         projects.forEach((project) =>{
             console.log(project.dataset.type);
