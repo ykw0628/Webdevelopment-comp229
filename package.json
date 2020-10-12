@@ -16,6 +16,7 @@
     "jquery": "^3.5.1",
     "mongoose": "^5.10.8",
     "morgan": "~1.9.1",
+    "passport": "^0.2.2",
     "popper.js": "^1.16.1"
   }
 }

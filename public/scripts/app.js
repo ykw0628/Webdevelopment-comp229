@@ -19,9 +19,7 @@ Date: Oct. 05.2020
             home__contact_btn.addEventListener("click", (event) =>{
                     location = "/contact";       
             });
-        }
-
-    
+        }    
     // Make navbar transparent when it is on the top
     const navbar = document.querySelector('#navbar');
     const navbarHeight = navbar.getBoundingClientRect().height;
@@ -72,26 +70,23 @@ Date: Oct. 05.2020
 
     }
 
-    //Projects category 
+    //Projects category  
 if (document.title == "projects") {
-    const workBtnContainer = document.querySelector('.project__categories');
+    const projectBtnContainer = document.querySelector('.project__categories');
     const projectContainer = document.querySelector('.project__projects');
     const projects = document.querySelectorAll('.project');
-    workBtnContainer.addEventListener('click', (e)=>{
+    projectBtnContainer.addEventListener('click', (e)=>{
         const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
         if (filter == null) {
             return;
-        }
-    
- //remove selection from the previous item and select new one
+        } 
+    //remove selection from the previous item and select new one
     const active = document.querySelector('.category__btn.selected');
     active.classList.remove('selected');
     const target = e.target.nodeName ==='BUTTON' ? e.target : e.target.parentNode;
     target.classList.add('selected');
 
-    projectContainer.classList.add('anim-out'); //when proejct category clicked add animation for proejcts
-    setTimeout(() => {
-        projects.forEach((project) =>{
+    projects.forEach((project) =>{
             console.log(project.dataset.type);
             if (filter === '*' || filter === project.dataset.type) {
                 project.classList.remove('invisible');
@@ -99,11 +94,9 @@ if (document.title == "projects") {
                 project.classList.add('invisible');
             }
         });
-        projectContainer.classList.remove('anim-out');
-    }, 300);
+
 });
 }
-
 
 
     }

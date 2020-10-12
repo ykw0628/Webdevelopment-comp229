@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <main class="container">
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+                <h1><%= title %></h1>
+                <br>
+                <table class="table table-bordered table-striped table-hover">
+                    <!--header Row -->
+                    <tr>
+                        <th class = "text-center">Name</th>
+                        <th class = "text-center">Author</th>
+                        <th class = "text-center">Published</th>
+                        <th class = "text-center">Description</th>
+                        <th class = "text-center">Price</th>
+                    </tr>
+                    <!--Repeated -->
+                    <% for (let i = 0; i < BookList.length; i++) { %>
+                        <tr>
+                            <td class="text-center"><%= BookList[i].name %></td>
+                            <td class="text-center"><%= BookList[i].author %></td>
+                            <td class="text-center"><%= BookList[i].published %></td>
+                            <td class="text-center"><%= BookList[i].description %></td>
+                            <td class="text-center"><%= BookList[i].price %></td>
+                        </tr>
+                    <% } %>
+                </table>
+            </div>
+        </div>
+    </main>
+  </body>
+</html>
