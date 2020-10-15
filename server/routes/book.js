@@ -5,18 +5,10 @@ let mongoose = require('mongoose');
 //Connect to our Book Model
 let Book = require('../models/book');
 
-//Get Route for the book list page - read operation
-router.get('/', (req, res, next) =>{
-    Book.find((err, bookList) =>{
-        if(err) {
-            return console.error(err);
-        }
-        else{
-            res.render('book', {title: 'Book List', BookList: bookList});
-            //console.log(BookList);
-        }
-    });
-});
+let bookController = require('../controllers/book');
 
+
+//Get Route for the book list page - read operation
+router.get('/', bookController.displayBookList);
 
 module.exports = router;

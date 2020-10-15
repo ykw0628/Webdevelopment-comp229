@@ -2,8 +2,7 @@ let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 //create a referece to the model
-let Book = require('../models/books');
-let bookController = require('../controllers/book')
+let Book = require('../models/book');
 module.exports.displayBookList = (req, res, next) =>{
     Book.find((err, bookList) =>{
         if(err) {

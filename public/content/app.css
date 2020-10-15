@@ -493,8 +493,11 @@ Date: Oct. 05.2020
   #footer{
       color: var(--color-deep-blue);
   }
-  
-  
+  .wrapper{
+      padding-top: 100px;
+      text-align: center;
+  }
+
   @media screen and (max-width: 768px){
       :root{
           /* Font */
