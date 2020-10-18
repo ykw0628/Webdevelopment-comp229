@@ -4,7 +4,6 @@ let router = express.Router();
 let indexController  = require('../controllers/index');
 let mongoose = require('mongoose');
 
-let Movie = require('../models/book');
 
 /* GET home page. */
 router.get('/', indexController.displayHomePage);
