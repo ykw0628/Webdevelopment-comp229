@@ -6,7 +6,7 @@
 <!-- home -->
   <main class="container">
       <div>
-          <% if(title == "Home") { %>
+    <% if(title == "Home") { %>
     <section id="home">
         <div class="home__container">
             <h1 class="home__title">Hello,<br>Welcome to <%= title %> page<br>
@@ -16,10 +16,22 @@
     </section>
     <% } %>
     <% if(title == "projects") { %>
-    <%- include content/projects.ejs %>  
+    <%- include ./content/projects.ejs %>  
     <% } %>
     <% if(title == "Services") { %>
-    <%- include content/services.ejs %>  
+    <%- include ./content/services.ejs %>  
+    <% } %>
+    <% if(title == "Contact List") { %>
+    <%- include ./content/contactsList.ejs %>  
+    <% } %>
+    <% if(title == "Add contacts") { %>
+    <%- include ./content/add-contacts.ejs %>  
+    <% } %>
+    <% if(title == "Update contacts") { %>
+    <%- include ./content/update-contacts.ejs %>  
+    <% } %>
+     <% if(title == "delete") { %>
+    <%- include ./content/delete.ejs %>  
     <% } %>
         </div>
   </main>

@@ -9,7 +9,7 @@ module.exports.displayContactlist = (req, res, next) =>{
             return console.error(err);
         }
         else{
-            res.render('contact', {title: 'contacts List', Contactlist: contactlist});
+            res.render('../contactList', {title: 'contacts List', Contactlist: contactlist});
             
         }
     });

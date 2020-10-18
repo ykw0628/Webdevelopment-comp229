@@ -97,6 +97,16 @@ if (document.title == "projects") {
 
 });
 }
+    let dangerBtns = document.getElementsByClassName("btn-danger");
+
+    for (const button of dangerBtns){
+        button.addEventListener('click', (e)=>{
+            if(!confirm("Are you sure?")){
+                e.preventDefault();
+                location.href= 'contacts-list';
+            }
+        });
+    }
 
 
     }
