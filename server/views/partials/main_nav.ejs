@@ -37,7 +37,13 @@
         <% } %>
           <a class="nav-link" href="/services">Services </a>
         </li>
-
+        <% if (title == "Contact List") { %>
+        <li class="navbar__menu__item">
+        <% } else  { %>
+        <li class="navbar__menu__item">
+        <% } %>
+          <a class="nav-link" href="/contacts-list">Contacts List </a>
+        </li>
         <% if (title == "Contact") { %>
         <li class="navbar__menu__item">
         <% } else  { %>
